@@ -1,6 +1,7 @@
 const membersSlider = new Swiper('.members_slider', {
     slidesPerView: 3,
     spaceBetween: 20,
+    loop: true,
     navigation: {
         nextEl: '.members_slider-button-next',
         prevEl: '.members_slider-button-prev',
@@ -11,6 +12,10 @@ const membersSlider = new Swiper('.members_slider', {
         renderFraction: (currentClass, totalClass) => {
             return `<span class="${currentClass}"></span><span>/</span><span class="${totalClass}"></span>`;
         },
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
     },
     breakpoints: {
         320: { slidesPerView: 1 },
