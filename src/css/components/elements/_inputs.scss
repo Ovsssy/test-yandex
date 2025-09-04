@@ -1,0 +1,52 @@
+// checkbox
+input[type=checkbox] {
+  vertical-align: middle;
+  margin: 0;
+  line-height: 1;
+  appearance: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.6;
+    transition: all 0.1s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:checked::before {
+    opacity: 1;
+  }
+
+  &+.wpcf7-list-item-label {
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+
+input[type="submit"] {
+  width: 100%;
+}
+
+
+// Сам инпут не нужен
+input[type=file] {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -9999px;
+  z-index: -1;
+}
+

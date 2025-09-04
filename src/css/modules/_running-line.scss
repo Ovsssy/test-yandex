@@ -1,0 +1,51 @@
+.running-line {
+  padding: 18px 0;
+  background-color: $red;
+
+  .running-track {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: scroll 8s linear infinite;
+
+    @include tablet {
+      animation: scroll 3s linear infinite;
+    }
+  }
+
+  @include tablet {
+    padding: 10px 0;
+    margin-top: -38px;
+  }
+
+  span {
+    font-family: $second-ff;
+    font-size: 22px;
+    line-height: 110%;
+    white-space: nowrap;
+    color: $white;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  .running-track_circle {
+    display: flex;
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

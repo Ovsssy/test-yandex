@@ -1,0 +1,14 @@
+.footer {
+  padding: 40px 0 72px 0;
+  background-color: $background-footer;
+
+  @include tablet {
+    padding: 40px 0 60px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba($gray, 0.6);
+  }
+}

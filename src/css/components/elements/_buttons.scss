@@ -1,0 +1,50 @@
+.btn {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 72px;
+  padding: 20px 49px;
+  border: 2px solid $black;
+  border-radius: 66px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+  color: $black;
+
+  @include tablet {
+    height: 47px;
+    padding: 18px 0;
+    background-color: rgba($white, 0.9);
+    border: none;
+  }
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+
+    @include tablet {
+      background-color: unset;
+      color: $black;
+    }
+  }
+
+  &.__secondary {
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      border-color: $yellow;
+      background-color: $yellow;
+      color: $black;
+
+      @include tablet {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}

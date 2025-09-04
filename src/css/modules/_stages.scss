@@ -1,0 +1,176 @@
+.stages {
+  position: relative;
+  margin-bottom: 200px;
+
+  @include tablet {
+    margin-bottom: 120px;
+  }
+}
+
+.stages_title-content {
+  max-width: 806px;
+  margin-bottom: 54px;
+
+  @include tablet {
+    margin-bottom: 148px;
+  }
+}
+
+.stages_title {
+  font-family: $second-ff;
+  font-size: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 120%;
+  color: $gray;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 36px;
+    line-height: 110%;
+  }
+}
+
+.stages_title-link {
+  display: inline-block;
+  max-width: 280px;
+  font-family: $base-ff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: none;
+  text-decoration: none;
+  color: $link;
+}
+
+.stages_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.stages_item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background-image: url("../../../static/img/stages-item-back.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &:nth-of-type(3) {
+    grid-row: span 2;
+    grid-column: 3;
+  }
+
+  &:last-child {
+    grid-column: span 2;
+
+    .stages_item-text {
+      max-width: 446px;
+    }
+  }
+}
+
+.stages_item-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: $white;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  color: $gray;
+}
+
+.stages_item-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: $gray;
+
+  @include tablet {
+    font-size: 18px;
+  }
+}
+
+.stages_plane-img {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: 10px;
+  width: 398px;
+  height: 230px;
+  z-index: 1;
+
+  @include tablet {
+    bottom: 310px;
+    left: 50%;
+    width: 335px;
+    height: 182px;
+    transform: translateX(-50%);
+  }
+}
+
+.stages_slider {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    height: auto;
+    padding: 62px 24px 34px 20px;
+    background-image: url("../../../static/img/stages-item-back.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.swiper-slide_item {
+  display: flex;
+  gap: 16px;
+}
+
+.stages_slider-navigation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 178px;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+.stages_slider-pagination.swiper-pagination {
+  position: relative;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  display: flex;
+  gap: 6px;
+
+  .swiper-pagination-bullet {
+    background-color: $light-gray-third;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $gray;
+    }
+  }
+}

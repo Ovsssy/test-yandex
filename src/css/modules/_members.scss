@@ -1,0 +1,140 @@
+.members {
+  position: relative;
+  margin-bottom: 140px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+}
+
+.members_title {
+  margin-bottom: 60px;
+  font-family: $second-ff;
+  font-size: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 120%;
+
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 110%;
+  }
+}
+
+.members_slider {
+  padding-top: 125px;
+  margin-top: -125px;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 76px;
+    margin-top: 0;
+  }
+}
+
+.members_slider-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    display: flex;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 28px;
+    object-fit: cover;
+    pointer-events: none;
+
+    @include tablet {
+      width: 244px;
+      height: 244px;
+    }
+  }
+}
+
+.members_slider-slide-name {
+  margin-bottom: 6px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  color: $gray;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+}
+
+.members_slider-slide-rank {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 120%;
+  color: rgba($gray, 0.6);
+}
+
+.members_slider-slide-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid $link;
+  border-radius: 62px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  text-decoration: none;
+  color: $link;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $link;
+    color: $white;
+
+    @include tablet {
+      background-color: $white;
+      color: $link;
+    }
+  }
+}
+
+.members_slider-nav-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 44px;
+
+  @include tablet {
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    height: 36px;
+    transform: translateX(-50%);
+  }
+}
+
+.members_slider-pagination {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  height: auto;
+
+  span {
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba($gray, 0.6);
+
+    &.swiper-pagination-current {
+      color: $gray;
+    }
+  }
+}

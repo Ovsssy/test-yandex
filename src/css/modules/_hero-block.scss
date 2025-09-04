@@ -1,0 +1,78 @@
+.hero-block {
+  padding-top: 124px;
+  padding-bottom: 130px;
+  margin-top: -88px;
+  background-image: url("../../../static/img/hero-back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    padding-top: 108px;
+    padding-bottom: 291px;
+    margin-top: -68px;
+    background-image: url("../../../static/img/hero-back-mobile.jpg");
+  }
+}
+
+.hero-block_content {
+  max-width: 542px;
+
+  @include tablet {
+    margin: 0 auto;
+  }
+}
+
+.hero-block_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-family: $second-ff;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  color: $gray;
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  span {
+    &:nth-child(2) {
+      text-align: center;
+    }
+
+    &:last-child {
+      text-align: end;
+    }
+  }
+}
+
+.hero-block_description {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 130%;
+  color: $gray;
+
+  @include tablet {
+    text-align: start;
+  }
+}
+
+.hero-block_buttons-wrapper {
+  display: flex;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn {
+    width: 263px;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
